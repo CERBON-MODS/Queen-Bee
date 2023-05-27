@@ -38,7 +38,7 @@ public class QueenBeeModEvents {
     @SubscribeEvent
     public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event){
         event.getRegistry().register(new StingerToBeesLootTableAdditionModifier.Serializer().setRegistryName(
-                new ResourceLocation(QueenBeeMod.MOD_ID, "add_stinger_drop_to_bee_loot_table.json")
+                new ResourceLocation(QueenBeeMod.MOD_ID, "add_stinger_drop_to_bee_loot_table")
         ));
     }
 }
