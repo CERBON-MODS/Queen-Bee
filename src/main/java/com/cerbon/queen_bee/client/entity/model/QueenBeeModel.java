@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class QueenBeeModel extends AnimatedGeoModel<QueenBeeEntity> {
     @Override
-    public ResourceLocation getModelResource(QueenBeeEntity animatable) {
+    public ResourceLocation getModelLocation(QueenBeeEntity animatable) {
         return new ResourceLocation(QueenBeeMod.MOD_ID, "geo/queen_bee.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureResource(QueenBeeEntity animatable) {
+    public ResourceLocation getTextureLocation(QueenBeeEntity animatable) {
         return new ResourceLocation(QueenBeeMod.MOD_ID, "textures/entity/queen_bee.png");
     }
 
     @Override
-    public ResourceLocation getAnimationResource(QueenBeeEntity animatable) {
+    public ResourceLocation getAnimationFileLocation(QueenBeeEntity animatable) {
         return new ResourceLocation(QueenBeeMod.MOD_ID, "animations/queen_bee.animation.json");
     }
 }

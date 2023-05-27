@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class QueenBeeModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, QueenBeeMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ENTITIES, QueenBeeMod.MOD_ID);
 
     public static final RegistryObject<EntityType<QueenBeeEntity>> QUEEN_BEE =
             ENTITY_TYPES.register("queen_bee",

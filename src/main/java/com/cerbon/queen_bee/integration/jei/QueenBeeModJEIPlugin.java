@@ -9,7 +9,7 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.recipe.vanilla.IJeiBrewingRecipe;
 import mezz.jei.api.recipe.vanilla.IVanillaRecipeFactory;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -17,7 +17,9 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @JeiPlugin
 public class QueenBeeModJEIPlugin implements IModPlugin {
@@ -29,10 +31,10 @@ public class QueenBeeModJEIPlugin implements IModPlugin {
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         registration.addIngredientInfo(new ItemStack(QueenBeeModItems.STINGER_SWORD.get()),
-                VanillaTypes.ITEM_STACK, Component.translatable("tooltip." + QueenBeeMod.MOD_ID + ".stinger_sword"));
+                VanillaTypes.ITEM_STACK, new TranslatableComponent("tooltip." + QueenBeeMod.MOD_ID + ".stinger_sword"));
 
         registration.addIngredientInfo(new ItemStack(QueenBeeModItems.ANTENNA.get()),
-                VanillaTypes.ITEM_STACK, Component.translatable("tooltip." + QueenBeeMod.MOD_ID + ".antenna"));
+                VanillaTypes.ITEM_STACK, new TranslatableComponent("tooltip." + QueenBeeMod.MOD_ID + ".antenna"));
 
         List<IJeiBrewingRecipe> recipes = new ArrayList<>();
         IVanillaRecipeFactory recipeFactory = registration.getVanillaRecipeFactory();

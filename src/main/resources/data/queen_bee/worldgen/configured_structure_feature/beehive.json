@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:village",
+  "config": {
+    "start_pool": "queen_bee:beehive/start_pool",
+    "size": 1
+  },
+  "biomes": "#queen_bee:has_structure/beehive",
+  "adapt_noise": true,
+  "spawn_overrides": {}
+}

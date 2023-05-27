@@ -3,7 +3,6 @@ package com.cerbon.queen_bee.client.sound;
 import com.cerbon.queen_bee.entity.custom.QueenBeeEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
-import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -15,7 +14,7 @@ public abstract class QueenBeeSoundInstance extends AbstractTickableSoundInstanc
     protected final QueenBeeEntity queenBee;
     private boolean hasSwitched;
     protected QueenBeeSoundInstance(QueenBeeEntity queenBee, SoundEvent pSoundEvent, SoundSource pSource) {
-        super(pSoundEvent, pSource, SoundInstance.createUnseededRandom());
+        super(pSoundEvent, pSource);
         this.queenBee = queenBee;
         this.x = ((float)queenBee.getX());
         this.y = ((float)queenBee.getY());

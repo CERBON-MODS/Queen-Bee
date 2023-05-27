@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class AntennaArmorModel extends AnimatedGeoModel<AntennaArmorItem> {
     @Override
-    public ResourceLocation getModelResource(AntennaArmorItem animatable) {
+    public ResourceLocation getModelLocation(AntennaArmorItem animatable) {
         return new ResourceLocation(QueenBeeMod.MOD_ID, "geo/antenna.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureResource(AntennaArmorItem animatable) {
+    public ResourceLocation getTextureLocation(AntennaArmorItem animatable) {
         return new ResourceLocation(QueenBeeMod.MOD_ID, "textures/armor/antenna.png");
     }
 
     @Override
-    public ResourceLocation getAnimationResource(AntennaArmorItem animatable) {
+    public ResourceLocation getAnimationFileLocation(AntennaArmorItem animatable) {
         return new ResourceLocation(QueenBeeMod.MOD_ID, "animations/antenna.animation.json");
     }
 }

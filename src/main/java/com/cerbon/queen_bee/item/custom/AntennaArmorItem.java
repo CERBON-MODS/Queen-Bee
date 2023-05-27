@@ -5,6 +5,7 @@ import com.cerbon.queen_bee.config.QueenBeeModCommonConfigs;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
@@ -12,7 +13,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import software.bernie.example.GeckoLibMod;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -37,9 +37,9 @@ public class AntennaArmorItem extends GeoArmorItem implements IAnimatable {
     public void appendHoverText(@NotNull ItemStack pStack, @Nullable Level pLevel, @NotNull List<Component> pTooltipComponents, @NotNull TooltipFlag pIsAdvanced) {
         if (QueenBeeModCommonConfigs.ENABLE_ANTENNA.get() && QueenBeeModCommonConfigs.ENABLE_ANTENNA_TOOLTIP.get()){
             if (Screen.hasShiftDown()){
-                pTooltipComponents.add(Component.translatable("tooltip." + QueenBeeMod.MOD_ID + ".antenna").withStyle(ChatFormatting.YELLOW));
+                pTooltipComponents.add(new TranslatableComponent("tooltip." + QueenBeeMod.MOD_ID + ".antenna").withStyle(ChatFormatting.YELLOW));
             }else {
-                pTooltipComponents.add(Component.translatable("tooltip." + QueenBeeMod.MOD_ID + ".item.shift_up").withStyle(ChatFormatting.YELLOW));
+                pTooltipComponents.add(new TranslatableComponent("tooltip." + QueenBeeMod.MOD_ID + ".item.shift_up").withStyle(ChatFormatting.YELLOW));
             }
         }
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

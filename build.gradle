@@ -23,7 +23,7 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 
 minecraft {
 
-    mappings channel: 'parchment', version: '2022.11.27-1.19.2'
+    mappings channel: 'parchment', version: '2022.11.06-1.18.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -94,6 +94,8 @@ mixin {
 }
 
 repositories {
+    maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
+    maven { url "https://nexus.resourcefulbees.com/repository/maven-public/" }
     maven {
         url "https://cursemaven.com"
         content {
@@ -123,9 +125,10 @@ dependencies {
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.19:${geckolib_version}")
-    implementation fg.deobf("curse.maven:the-bumblezone-forge-362479:4529662") //v6.7.19-1.19.2
-    implementation fg.deobf("curse.maven:productivebees-377897:4531143")
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.18:${geckolib_version}")
+    implementation fg.deobf("curse.maven:the-bumblezone-forge-362479:3810570") //v5.1.2-1.18.2
+    runtimeOnly fg.deobf("com.telepathicgrunt:FeatureNBTDeadlockBeGone-Forge:2.0.0+1.18.2")
+    implementation fg.deobf("curse.maven:productivebees-377897:4257307")
 
     //JEI
     compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
