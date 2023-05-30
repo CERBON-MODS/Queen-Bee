@@ -1,5 +1,6 @@
 package com.cerbon.queen_bee.loot;
 
+import com.cerbon.queen_bee.config.QueenBeeModCommonConfigs;
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -33,7 +34,7 @@ public class StingerToBeesLootTableAdditionModifier extends LootModifier {
     @NotNull
     @Override
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
-        if (checkIfInjectLoot(context)){
+        if (checkIfInjectLoot(context) && QueenBeeModCommonConfigs.ENABLE_BEES_DROPPING_STINGER.get()){
             generatedLoot.add(new ItemStack(addition, 1));
         }
         return generatedLoot;
